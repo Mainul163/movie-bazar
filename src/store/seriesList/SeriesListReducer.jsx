@@ -1,12 +1,12 @@
 import { GET_SERIES_LIST } from "./SeriesListActionTypes";
 
 const list = {
-  seriesList: [],
+  seriesListData: [],
 };
 export const seriesListInfo = (state = list, action) => {
-  switch (action.typs) {
+  switch (action.type) {
     case GET_SERIES_LIST:
-      return { ...state, seriesList: action.seriesList };
+      return { ...state, seriesListData: action.seriesList };
     default:
       return state;
   }

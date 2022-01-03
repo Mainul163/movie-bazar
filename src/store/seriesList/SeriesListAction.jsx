@@ -2,6 +2,7 @@ import { APIkey } from "../../Api/ApiKey";
 import axios from "../../baseUrl/basrUrl";
 import { GET_SERIES_LIST } from "./SeriesListActionTypes";
 
+//************* get data from api ***************** */
 export const getAllSeriesInfo = async () => {
   const movie = "Harry";
   const seriesList = await axios
@@ -14,3 +15,5 @@ export const getAllSeriesInfo = async () => {
     seriesList: seriesList,
   };
 };
+
+//************* end ***************** */
