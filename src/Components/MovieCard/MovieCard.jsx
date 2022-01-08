@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const MovieCard = () => {
-  return <div>It is a MovieCard</div>;
+	return <div>update movieCard </div>;
 };
 
 export default MovieCard;
