@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { seriesListInfo } from "./store/seriesList/SeriesListReducer";
+import DataConnectionAvailabiltyModal from "./hoc/onlineStatus/OnlineStatus";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   seriesList: seriesListInfo,
@@ -19,9 +20,11 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <DataConnectionAvailabiltyModal>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </DataConnectionAvailabiltyModal>
   </React.StrictMode>,
   document.getElementById("root")
 );
