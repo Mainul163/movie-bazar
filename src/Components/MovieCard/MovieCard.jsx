@@ -1,7 +1,7 @@
 import React from "react";
 
 const MovieCard = () => {
-  return <div>It is a MovieCard div & this site working</div>;
+  return <div>Ifsdfgdshfgg</div>;
 };
 
 export default MovieCard;
