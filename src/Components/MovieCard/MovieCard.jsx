@@ -1,7 +1,7 @@
 import React from "react";
 
 const MovieCard = () => {
-  return <div>Ifsdfgdshfxzdsdsdgg</div>;
+  return <div>Ifsdfgdshdsdgg</div>;
 };
 
 export default MovieCard;
