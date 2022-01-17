@@ -1,15 +1,25 @@
 import React from "react";
-import { Card, Col } from "antd";
-const { Meta } = Card;
+import { Link } from "react-router-dom";
+import "./MovieCrad.scss";
+
 const MovieCard = ({ movie }) => {
   console.log(movie);
   return (
-    <Col xxl={6} xl={6} md={2}>
-      <Card hoverable cover={<img alt="example" src={movie.Poster} />}>
-        {" "}
-        <Meta title="Europe Street beat" description="www.instagram.com" />
-      </Card>
-    </Col>
+    <div className="card-item">
+      <Link to={`/movie/${movie.imdbID}`}>
+        <div className="card-inner">
+          <div className="card-top">
+            <img src={movie.Poster} alt={movie.Title} />
+          </div>
+          <div className="card-bottom">
+            <div className="card-info">
+              <h4>{movie.Title}</h4>
+              <p>{movie.Year}</p>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </div>
   );
 };
 

@@ -18,39 +18,16 @@ const MoveListing = () => {
   let renderMovies = "";
   renderMovies =
     movieList.seriesList.seriesListData.Response === "True" ? (
-      <Row>
-        {movieList.seriesList.seriesListData.Search.map((data, index) => (
-          <MovieCard movie={data} key={index + 1} />
-        ))}
-      </Row>
+      movieList.seriesList.seriesListData.Search.map((data, index) => (
+        <MovieCard key={index} movie={data} />
+      ))
     ) : (
-      // movieList.seriesList.seriesListData.Search.map((data, index) => (
-      //   <Row justify="space-between">
-      //     <Col xxl={5} xl={5}>
-      //       <MovieCard movie={data} key={index + 1} />
-      //     </Col>
-      //   </Row>
-      // ))
-      <div className="movies-erros">
+      <div className="movies-error">
         <h1>{movieList.seriesList.seriesListData.Error}</h1>
       </div>
     );
   return (
     <>
-      <Row justify="end">
-        <Col xxl={12} xl={12} md={4} lg={4} style={{ border: "1px solid red" }}>
-          <p>Movies</p>
-        </Col>
-        <Col xxl={12} xl={12} md={2} style={{ border: "1px solid red" }}>
-          <p>Movies</p>
-        </Col>
-        <Col xxl={6} xl={6} md={2} style={{ border: "1px solid red" }}>
-          <h2>Movies</h2>
-        </Col>
-        <Col xxl={6} xl={6} md={2} style={{ border: "1px solid red" }}>
-          <h2>Movies</h2>
-        </Col>
-      </Row>
       <div className="movie-wrapper">
         <div className="movie-list">
           <h2>Movies</h2>
