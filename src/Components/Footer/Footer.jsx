@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div>Mpvie App</div>
-      <div>020221, Movie, or its affiliates</div>
+      <div>
+        <p>&copy; Md.Minul Islam</p>
+      </div>
     </div>
   );
 };

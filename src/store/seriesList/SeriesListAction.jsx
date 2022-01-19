@@ -44,7 +44,6 @@ export const movieDetails = async (id) => {
     .then((res) => res.data)
     .catch((error) => console.log(error));
 
-  console.log(details);
   return {
     type: GET_SHOW_DETAILS,
     details: details,
